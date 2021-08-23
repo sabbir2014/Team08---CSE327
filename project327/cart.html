@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <!--<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">-->
+
+  <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Your Shopping Cart</title>
+</head>
+
+<body>
+  
+
+  <!-- Cart Items -->
+  <div class="container-md cart">
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="./images/phonecase.jpg" alt="">
+            <div>
+              <p>Samsung Phone Case</p>
+              <span>Price: Tk. 1, 375</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Tk. 1, 375</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="./images/headphone.jpg" alt="">
+            <div>
+              <p>Blue headphone</p>
+              <span>Price: Tk. 4, 500</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Tk. 4, 500</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="./images/juicer.jpg" alt="">
+            <div>
+              <p>Juicer</p>
+              <span>Price: Tk. 7, 000</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Tk. 7, 000</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="./images/speaker.png" alt="">
+            <div>
+              <p>Bluetooth Speaker</p>
+              <span>Price: Tk. 10, 000</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Tk. 10, 000</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="./images/laptop.jpg" alt="">
+            <div>
+              <p>hp Envy Laptop</p>
+              <span>Price: Tk. 82,000</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>Tk. 82,000</td>
+      </tr>
+    </table>
+
+    <div class="total-price">
+      <table>
+        <tr>
+          <td>Total</td>
+          <td>Tk. 104, 875</td>
+        </tr>
+        <tr>
+          <td>Shipping cost</td>
+          <td>Tk. 3, 000</td>
+        </tr>
+        <tr>
+          <td>Cart Total</td>
+          <td>Tk. 107, 875</td>
+        </tr>
+      </table>
+      <a href="#" class="checkout_btn">Checkout</a> 
+
+    </div>
+
+  </div>
+
+
+
+  
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
