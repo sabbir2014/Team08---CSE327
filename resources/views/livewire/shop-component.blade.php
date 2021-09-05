@@ -19,13 +19,11 @@
 				</div>
 
 				<div class="wrap-shop-control">
-					<!-- Html work for Mini navigation bar -->
-					<!-- start wrap shop control -->
+
 					<h1 class="shop-title">Digital & Electronics</h1>
 
 					<div class="wrap-right">
 
-						<!-- sorting -->
 						<div class="sort-item orderby ">
 							<select name="orderby" class="use-chosen" >
 								<option value="menu_order" selected="selected">Default sorting</option>
@@ -37,7 +35,6 @@
 							</select>
 						</div>
 
-						<!-- Pages -->
 						<div class="sort-item product-per-page">
 							<select name="post-per-page" class="use-chosen" >
 								<option value="12" selected="selected">12 per page</option>
@@ -50,7 +47,6 @@
 							</select>
 						</div>
 
-						<!-- Display mode -->
 						<div class="change-display-mode">
 							<a href="#" class="grid-mode display-mode active"><i class="fa fa-th"></i>Grid</a>
 							<a href="list.html" class="list-mode display-mode"><i class="fa fa-th-list"></i>List</a>
@@ -72,7 +68,7 @@
 									</a>
 								</div>
 								<div class="product-info">
-									<a href="detail.html" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
+									<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
 									<div class="wrap-price"><span class="product-price">$250.00</span></div>
 									<a href="#" class="btn add-to-cart">Add To Cart</a>
 								</div>
@@ -253,15 +249,12 @@
 					<h2 class="widget-title">All Categories</h2>
 					<div class="widget-content">
 						<ul class="list-category">
+							<?php foreach ($categories as $category): ?>
+								<li class="category-item">
+									<a href="{{route('product.category',['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a>
+								</li>
+							<?php endforeach; ?>
 
-
-							 <?php foreach ($categories as $category): ?>
-								 <li class="category-item">
-									 <a href="{{route('product.category',['category_slug'=>$category->slug])}}" class="cate-link">{{$category->name}}</a>
-								 </li>
-							 <?php endforeach; ?>
-
-<<<<<<< HEAD
 
 
 						</ul>
@@ -342,21 +335,6 @@
 									<div class="product-info">
 										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
 										<div class="wrap-price"><span class="product-price">$168.00</span></div>
-=======
-						<ul class="product-list grid-products equal-container">
-							@foreach ($products as $product)
-							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-								<div class="product product-style-3 equal-elem ">
-									<div class="product-thumnail">
-										<a href="{{ route('product.details', ['slug'=>$product->slug]) }}" title="{{ $product->name }}">
-											<figure><img src="{{ asset('assets/images/products')}}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
-										</a>
-									</div>
-									<div class="product-info">
-										<a href="{{ route('product.details', ['slug'=>$product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
-										<div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
-										<a href="#" class="btn add-to-cart">Add To Cart</a>
->>>>>>> origin/main
 									</div>
 								</div>
 							</li>
@@ -383,7 +361,7 @@
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="detail.html" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
+										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
 										<div class="wrap-price"><span class="product-price">$168.00</span></div>
 									</div>
 								</div>
@@ -397,7 +375,7 @@
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="detail.html" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
+										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
 										<div class="wrap-price"><span class="product-price">$168.00</span></div>
 									</div>
 								</div>

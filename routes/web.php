@@ -48,7 +48,7 @@ Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 //For user or customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
-      Route::get('/user/change-password',UserChangePasswordComponent::class)->name('user.changepassword');
+      Route::get('/user/change-password', App\Http\Livewire\User\UserChangePasswordComponent::class)->name('user.changepassword');
 });
 
 //For admin
