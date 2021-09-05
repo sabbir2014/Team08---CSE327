@@ -26,7 +26,7 @@ Route::get('/',HomeComponent::class);
 Route::get('/shop', ShopComponent::class);
 Route::get('/cart', CartComponent::class);
 Route::get('/checkout', CheckoutComponent::class);
-
+Route::get('/product-category/{category_slug}', App\Http\Livewire\CategoryComponent::class)->name('product.category');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
