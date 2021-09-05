@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/color-01.css') }}">
@@ -73,8 +74,17 @@
 									<a title="My Account" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
 										<li class="menu-item" >
-											<a title="Dashboard" href="#">Dashboard</a>
+											<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 										</li>
+										<li class="menu-item">
+											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>
+										</li>
+										
+										<form id="logout-form" method="POST" action="{{ route('logout') }}">
+											@csrf 
+											
+										
+										</form>
 									</ul>
 								</li>
 										@else
@@ -82,8 +92,17 @@
 									<a title="My Account" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
 										<li class="menu-item" >
-											<a title="Dashboard" href="#">Dashboard</a>
+											<a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
 										</li>
+										<li class="menu-item">
+											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>
+										</li>
+										
+										<form id="logout-form" method="POST" action="{{ route('logout') }}">
+											@csrf 
+											
+										
+										</form>
 									</ul>
 								</li>
 									@endif
