@@ -31,9 +31,9 @@ Route::get('/shop', ShopComponent::class);
 Route::get('/cart', CartComponent::class);
 
 Route::get('/checkout', CheckoutComponent::class);
-<<<<<<< HEAD
+
 Route::get('/product-category/{category_slug}', App\Http\Livewire\CategoryComponent::class)->name('product.category');
-=======
+
 
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 
@@ -48,12 +48,12 @@ Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 //For user or customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
-
+      Route::get('/user/change-password',UserChangePasswordComponent::class)->name('user.changepassword');
 });
 
 //For admin
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
->>>>>>> origin/main
+
 
 });
