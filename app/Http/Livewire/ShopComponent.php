@@ -14,4 +14,14 @@ class ShopComponent extends Component
         $products = Product::paginate(12);
         return view('livewire.shop-component', ['products' => $products])->layout("layouts.base");
     }
+    public function store($product_id,$product_name,$product_price)
+    {
+        Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+        session()->flash('success_message','Item added in Cart');
+        return redirect()->route('product.cart');
+    }
+    public function addToWishlist($product_id, $product_name, $product_price)
+    {
+        Cart::instance('wishlist')->add($product_id, $product_name, 1, $product_price)->associate('App\Models\Product');
+    }
 }
